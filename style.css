@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: #151b2c;
+    --accent: #6366f1;
+    --accent-hover: #4f46e5;
+    --text-white: #f3f4f6;
+    --text-muted: #9ca3af;
+    --border: #242f47;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: var(--text-white);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.btn-nav {
+    background: var(--accent);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+    padding: 40px 20px;
+}
+
+.hero-content { max-width: 800px; }
+
+.badge {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: #818cf8;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 20px 0;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 19px;
+    color: var(--text-muted);
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button, .btn-secondary {
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary { background-color: var(--accent); color: white; }
+.btn-primary:hover { background-color: var(--accent-hover); }
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-secondary:hover { background-color: var(--border); }
+
+.stats-section { padding: 60px 8%; background-color: #0e1322; }
+.stats-grid { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+.stat-card { text-align: center; padding: 20px; }
+.stat-card h2 { font-size: 42px; color: var(--accent); }
+.stat-card p { color: var(--text-muted); font-size: 14px; }
+
+.team-section { padding: 90px 8%; text-align: center; }
+.section-subtitle { color: var(--text-muted); margin-bottom: 50px; }
+.team-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+
+.team-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 40px 30px;
+    width: 280px;
+    transition: transform 0.3s;
+}
+.team-card:hover { transform: translateY(-5px); }
+.avatar { font-size: 40px; margin-bottom: 15px; }
+.team-card h3 { font-size: 20px; margin-bottom: 5px; }
+.role { color: var(--accent); font-size: 14px; font-weight: 500; }
+
+.faq-section { padding: 90px 8%; background-color: #0e1322; }
+.faq-section h2 { text-align: center; margin-bottom: 40px; }
+.faq-container { max-width: 700px; margin: 0 auto; }
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 15px 0;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    color: var(--text-white);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: var(--text-muted);
+}
+.faq-answer p { padding-top: 10px; font-size: 15px; }
+
+
+.footer { padding: 80px 8% 30px 8%; border-top: 1px solid var(--border); text-align: center; }
+.footer-content { max-width: 500px; margin: 0 auto 50px auto; }
+.footer h2 { font-size: 32px; margin-bottom: 10px; }
+.footer p { color: var(--text-muted); margin-bottom: 30px; }
+
+form { display: flex; gap: 10px; justify-content: center; }
+form input {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 14px;
+    border-radius: 8px;
+    color: white;
+    width: 70%;
+    font-size: 15px;
+}
+.btn-submit { background-color: var(--accent); color: white; padding: 0 20px; }
+
+.copyright { font-size: 13px; color: #4b5563; }
+
+
+.hidden-alert {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+.hidden-alert.show { opacity: 1; pointer-events: auto; }
+.alert-content {
+    background-color: var(--bg-card);
+    padding: 30px; border-radius: 12px;
+    border: 1px solid var(--accent);
+    max-width: 450px; text-align: center;
+}
+.alert-content p { margin-bottom: 20px; font-size: 16px; }
+.alert-content button { background-color: var(--accent); color: white; width: 100%; }
