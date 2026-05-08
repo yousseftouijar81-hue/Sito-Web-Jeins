@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevStart Hub - Startup Universitaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🚀 Jeins</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#statistiche">I Numeri</a>
+            <a href="#team">Team</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contatti" class="btn-nav">Contattaci</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="badge">Sprint Settimanali 2026</span>
+            <h1>Qui trovari la soluzione nel coding</h1>
+            <p>Siamo un incubatore tech universitario. Ogni settimana riceviamo un obiettivo di programmazione complesso e lo risolviamo lavorando in team agili.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="mostraNotifica()">Vedi Obiettivo Attuale</button>
+                <a href="#team" class="btn-secondary">Chi Siamo</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="statistiche" class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2 class="counter" data-target="14">14</h2>
+                <p>Progetti Completati</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="1200">1,200+</h2>
+                <p>Ore di Coding</p>
+            </div>
+            <div class="stat-card">
+                <h2 class="counter" data-target="8">8</h2>
+                <p>Sviluppatori nel Team</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <h2>Il Nostro Core Team</h2>
+        <p class="section-subtitle">Studenti uniti dalla stessa passione per lo sviluppo software.</p>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="avatar">💻</div>
+                <h3>Youssef T.</h3>
+                <p class="role">Frontend & UI Design</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar">⚙️</div>
+                <h3>Luca R.</h3>
+                <p class="role">Backend & Database</p>
+            </div>
+            <div class="team-card">
+                <div class="avatar">📊</div>
+                <h3>Matteo B.</h3>
+                <p class="role">Project Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>Domande Frequenti</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Come funzionano i vostri obiettivi settimanali?</button>
+                <div class="faq-answer">
+                    <p>Ogni lunedì l'università o i nostri mentor ci assegnano un problema reale. Abbiamo tempo fino a venerdì per progettare, sviluppare e testare la soluzione.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Come contattarci?</button>
+                <div class="faq-answer">
+                    <p>Tramite email verrai contattato, inserisci i tuoi dati in Contattaci</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti" class="footer">
+        <div class="footer-content">
+            <h2>Pronto a collaborare?</h2>
+            <p>Sei un professore o un'azienda? Mandaci una proposta di progetto.</p>
+            <form onsubmit="gestisciContatto(event)">
+                <input type="email" id="email-input" placeholder="La tua email universitaria/aziendale" required>
+                <button type="submit" class="btn-submit">Invia Candidatura</button>
+            </form>
+        </div>
+        <p class="copyright">&copy; 2026 DevStart Hub. Tutti i diritti riservati (Progetto Universitario).</p>
+    </section>
+
+    <div id="custom-alert" class="hidden-alert">
+        <div class="alert-content">
+            <p>🎯 <strong>Obiettivo di questa settimana:</strong> Sviluppare una Landing Page interattiva e responsiva per il lancio del brand.</p>
+            <button onclick="chiudiNotifica()">Ho capito, fantastico!</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
